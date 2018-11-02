@@ -37,14 +37,14 @@ public class Test {
 
         Iterator<Integer> it = ints.iterator();
 
-        while(it.hasNext()){
-            Integer temp = it.next();
-            if(temp.intValue() == 2){
-                it.remove();
-            } else {
-                System.out.println(temp.intValue());
+        for (int i = 0; i < ints.size(); i++) {
+            System.out.println(ints.get(i));
+            if(ints.get(i) == i2){
+                ints.remove(i2);
+                i--;
             }
         }
+
 
         for (Integer temp : ints) {
             System.out.println(temp.intValue());
